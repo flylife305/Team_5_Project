@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.2.5">
+  <diagram name="Page-1" id="OCeZ87tBupdZL2zxJkyO">
+    <mxGraphModel dx="948" dy="644" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YMurYbufdvSpK92Cy0HQ-9" value="«interface»&lt;br&gt;&lt;b&gt;Mortgage GUI&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="60" y="400" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="YMurYbufdvSpK92Cy0HQ-13" value="Applicant" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="160" height="194" as="geometry">
+            <mxRectangle x="330" y="360" width="100" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YMurYbufdvSpK92Cy0HQ-14" value="-applicant_name: string&lt;div&gt;-applicant_income: int&lt;/div&gt;&lt;div&gt;-applicant_credit_score: int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YMurYbufdvSpK92Cy0HQ-13">
+          <mxGeometry y="26" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YMurYbufdvSpK92Cy0HQ-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="YMurYbufdvSpK92Cy0HQ-13">
+          <mxGeometry y="106" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="YMurYbufdvSpK92Cy0HQ-16" value="setName()&lt;div&gt;setIncome()&lt;/div&gt;&lt;div&gt;setCreditScore()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YMurYbufdvSpK92Cy0HQ-13">
+          <mxGeometry y="114" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YMurYbufdvSpK92Cy0HQ-17" value="Application" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="40" width="160" height="194" as="geometry">
+            <mxRectangle x="330" y="360" width="100" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YMurYbufdvSpK92Cy0HQ-18" value="-application_id: int&lt;div&gt;-applicant_name: string&lt;/div&gt;&lt;div&gt;-is_approved: Boolean&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YMurYbufdvSpK92Cy0HQ-17">
+          <mxGeometry y="26" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YMurYbufdvSpK92Cy0HQ-19" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="YMurYbufdvSpK92Cy0HQ-17">
+          <mxGeometry y="106" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="YMurYbufdvSpK92Cy0HQ-20" value="calcDownPayment()&lt;div&gt;calInterestRate()&lt;/div&gt;&lt;div&gt;calcLoanAffordability()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YMurYbufdvSpK92Cy0HQ-17">
+          <mxGeometry y="114" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YMurYbufdvSpK92Cy0HQ-22" value="Mortgage Calculator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="40" width="160" height="194" as="geometry">
+            <mxRectangle x="330" y="360" width="100" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YMurYbufdvSpK92Cy0HQ-23" value="-address: string&lt;div&gt;-term_length: int&lt;/div&gt;&lt;div&gt;-application_id: int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YMurYbufdvSpK92Cy0HQ-22">
+          <mxGeometry y="26" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YMurYbufdvSpK92Cy0HQ-24" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="YMurYbufdvSpK92Cy0HQ-22">
+          <mxGeometry y="106" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="YMurYbufdvSpK92Cy0HQ-25" value="calcMonthlyPayment()&lt;div&gt;calcTotalPayment()&lt;/div&gt;&lt;div&gt;calcPropertyTax()&lt;/div&gt;&lt;div&gt;calcInsurance()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YMurYbufdvSpK92Cy0HQ-22">
+          <mxGeometry y="114" width="160" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

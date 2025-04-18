@@ -32,6 +32,7 @@ class Minimally_Qualified(Applicant):
 class Mortgage_Calculator():
     def __init__(self):
         pass
-        
+class
+
         
 

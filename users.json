@@ -1,0 +1,22 @@
+{
+    "Craig": {
+        "password": "1234",
+        "mortgage_data": {
+            "price": "250000",
+            "interest_rate": "12",
+            "down_payment": "20000",
+            "property_tax": "3",
+            "loan_term": "300"
+        }
+    },
+    "Curry": {
+        "password": "1122",
+        "mortgage_data": {
+            "price": "300000",
+            "interest_rate": "4",
+            "down_payment": "30000",
+            "property_tax": "4",
+            "loan_term": "240"
+        }
+    }
+}

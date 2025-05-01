@@ -35,6 +35,7 @@ users = load_users()
 def login_screen():
     auth_win = tk.Tk()
     auth_win.title("Login or Sign Up")
+    auth_win.geometry("500x500")
 
     tk.Label(auth_win, text="Username:").grid(row=0, column=0, padx=10, pady=5)
     username_entry = tk.Entry(auth_win)
@@ -69,8 +70,13 @@ def login_screen():
             save_users(users)
             messagebox.showinfo("Success", "Account created. You can now log in.")
 
-    tk.Button(auth_win, text="Login", command=login).grid(row=2, column=0, columnspan=2, pady=10)
-    tk.Button(auth_win, text="Sign Up", command=signup).grid(row=3, column=0, columnspan=2, pady=5)
+     def logout():
+        auth_win.destroy()
+         
+    tk.Button(auth_win, text="Login", command=login).grid(row=2, column=0, pady=10)
+    tk.Button(auth_win, text="Sign Up", command=signup).grid(row=2, column=1)
+    tk.Button(auth_win, text="Logout", command=logout).grid(row=2, column=2)
+
 
     auth_win.mainloop()
 

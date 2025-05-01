@@ -114,9 +114,31 @@ def open_calculator(username):
     term_entry.grid(row=4, column=1, padx=10, pady=5)
     term_entry.insert(0, user_data.get("loan_term", ""))
 
+<<<<<<< HEAD
     result_label = tk.Label(root, text="User Data")
     result_label.grid(row=6, column=0, columnspan=2)
 
+=======
+    tk.Label(root, text="Credit Score").grid(row=5, column=0, padx=10, pady=5, sticky="e")
+    credit_score_entry = tk.Entry(root)
+    credit_score_entry.grid(row=5, column=1, padx=10, pady=5)
+    credit_score_entry.insert(0, user_data.get("credit_score", ""))
+
+    result_label = tk.Label(root, text="User Data")
+    result_label.grid(row=8, column=0, columnspan=2)
+
+    def classify_credit(credit_score):
+        try:
+            score = int(credit_score)
+            if score <= 600:
+                return "Minimally Qualified"
+            elif 600 < score < 700:
+                return "Moderately Qualified"
+            else:
+                return "Well Qualified"
+        except:
+            return "Unknown"
+>>>>>>> e6eb03d (Credit score added and function)
     # Function to save data
     def save_data():
         print("Saving data...")
@@ -125,7 +147,13 @@ def open_calculator(username):
             "interest_rate": interest_entry.get(),
             "down_payment": down_payment_entry.get(),
             "property_tax": tax_entry.get(),
+<<<<<<< HEAD
             "loan_term": term_entry.get()
+=======
+            "loan_term": term_entry.get(),
+            "credit_score": credit_score_entry.get()
+            
+>>>>>>> e6eb03d (Credit score added and function)
         }
         save_users(users)
         messagebox.showinfo("Success", "Data saved successfully!")
@@ -141,6 +169,10 @@ def open_calculator(username):
         Down Payment: {users[username]['mortgage_data'].get('down_payment', '')}
         Property Tax: {users[username]['mortgage_data'].get('property_tax', '')}
         Loan Term: {users[username]['mortgage_data'].get('loan_term', '')}
+<<<<<<< HEAD
+=======
+        Credit Score: {users[username]['mortgage_data'].get('credit_score', '')}
+>>>>>>> e6eb03d (Credit score added and function)
         """
         result_label.config(text=display_data)
         print("Displayed saved data:", display_data)
@@ -149,13 +181,21 @@ def open_calculator(username):
     display_saved_data()
 
     ####################### Navigation Buttons############
+<<<<<<< HEAD
     tk.Button(root, text="Save Inputs", command=save_data).grid(row=5, column=0, columnspan=2, pady=10)
+=======
+    tk.Button(root, text="Save Inputs", command=save_data).grid(row=6, column=0, columnspan=2, pady=10)
+>>>>>>> e6eb03d (Credit score added and function)
     tk.Button(root, text="Sign Out", command=login_screen).grid(row=9, column=0, columnspan=2, pady=10)
     tk.Button(root, text="Exit App", command=root.quit).grid(row=10, column=0, columnspan=2, pady=10)
 
 
     # Treeview for displaying DB data
+<<<<<<< HEAD
     columns = ("Username", "Price", "Interest Rate", "Down Payment", "Property Tax", "Loan Term")
+=======
+    columns = ("Username", "Price", "Interest Rate", "Down Payment", "Property Tax", "Loan Term", "Credit Score")
+>>>>>>> e6eb03d (Credit score added and function)
     tree = ttk.Treeview(root, columns=columns, show="headings")
     for col in columns:
         tree.heading(col, text=col)
@@ -168,6 +208,13 @@ def open_calculator(username):
         try:
             with open("users.json", "r") as f:
                 users_data = json.load(f)
+<<<<<<< HEAD
+=======
+            
+            
+
+            cursor.execute("DROP TABLE IF EXISTS mortgage_data")
+>>>>>>> e6eb03d (Credit score added and function)
 
             cursor.execute("""
             CREATE TABLE IF NOT EXISTS mortgage_data (
@@ -176,7 +223,12 @@ def open_calculator(username):
                 interest_rate TEXT,
                 down_payment TEXT,
                 property_tax TEXT,
+<<<<<<< HEAD
                 loan_term TEXT
+=======
+                loan_term TEXT,
+                credit_score TEXT
+>>>>>>> e6eb03d (Credit score added and function)
             )
             """)
 
@@ -185,15 +237,25 @@ def open_calculator(username):
                 if mortgage:
                     cursor.execute("""
                     INSERT OR REPLACE INTO mortgage_data (
+<<<<<<< HEAD
                         username, price, interest_rate, down_payment, property_tax, loan_term
                     ) VALUES (?, ?, ?, ?, ?, ?)
+=======
+                        username, price, interest_rate, down_payment, property_tax, loan_term, credit_score
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?)
+>>>>>>> e6eb03d (Credit score added and function)
                     """, (
                         username,
                         mortgage.get("price", ""),
                         mortgage.get("interest_rate", ""),
                         mortgage.get("down_payment", ""),
                         mortgage.get("property_tax", ""),
+<<<<<<< HEAD
                         mortgage.get("loan_term", "")
+=======
+                        mortgage.get("loan_term", ""),
+                        mortgage.get("credit_score", "")
+>>>>>>> e6eb03d (Credit score added and function)
                     ))
 
             conn.commit()

@@ -6,7 +6,23 @@
             "interest_rate": "3",
             "down_payment": "20000",
             "property_tax": "5",
+<<<<<<< HEAD
             "loan_term": "360"
+=======
+            "loan_term": "650",
+            "credit_score": "700"
+        }
+    },
+    "Tom": {
+        "password": "11",
+        "mortgage_data": {
+            "price": "220000",
+            "interest_rate": "21",
+            "down_payment": "28000",
+            "property_tax": "3000",
+            "loan_term": "240",
+            "credit_score": "500"
+>>>>>>> e6eb03d (Credit score added and function)
         }
     }
 }

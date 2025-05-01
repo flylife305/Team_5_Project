@@ -4,9 +4,9 @@ pp = price_of_property = int(input()) #price of desired property
 
 i = interest_rate = float(input()) #dependent on qualification level
 
-dp = down_payment = int(input()) #dependdent on qualification level
+dp = down_payment = int(input())
 
-pt = property_tax = float(input()) #dependent on location
+pt = property_tax = float(input())
 
 n = loan_term = int(input()) #desired loan term
 

@@ -4,6 +4,8 @@ import json
 import os
 import sqlite3
 
+############## Database setup
+# Create a SQLite database to store user data
 conn = sqlite3.connect('mortgage_data.db')
 cursor = conn.cursor()
 
@@ -35,7 +37,6 @@ users = load_users()
 def login_screen():
     auth_win = tk.Tk()
     auth_win.title("Login or Sign Up")
-    auth_win.geometry("500x500")
 
     tk.Label(auth_win, text="Username:").grid(row=0, column=0, padx=10, pady=5)
     username_entry = tk.Entry(auth_win)
@@ -70,13 +71,12 @@ def login_screen():
             save_users(users)
             messagebox.showinfo("Success", "Account created. You can now log in.")
 
-     def logout():
+    def logout():
         auth_win.destroy()
-         
+
     tk.Button(auth_win, text="Login", command=login).grid(row=2, column=0, pady=10)
     tk.Button(auth_win, text="Sign Up", command=signup).grid(row=2, column=1)
     tk.Button(auth_win, text="Logout", command=logout).grid(row=2, column=2)
-
 
     auth_win.mainloop()
 
@@ -91,19 +91,19 @@ def open_calculator(username):
     root.title("Mortgage Calculator")
 
     # Price input field
-    tk.Label(root, text="Price of Property:").grid(row=0, column=0, padx=10, pady=5, sticky="e")
+    tk.Label(root, text="Price of Property($):").grid(row=0, column=0, padx=10, pady=5, sticky="e")
     price_entry = tk.Entry(root)
     price_entry.grid(row=0, column=1, padx=10, pady=5)
     price_entry.insert(0, user_data.get("price", ""))
 
     # Interest rate
-    tk.Label(root, text="Interest Rate:").grid(row=1, column=0, padx=10, pady=5, sticky="e")
+    tk.Label(root, text="Interest Rate(%):").grid(row=1, column=0, padx=10, pady=5, sticky="e")
     interest_entry = tk.Entry(root)
     interest_entry.grid(row=1, column=1, padx=10, pady=5)
     interest_entry.insert(0, user_data.get("interest_rate", ""))
 
     # Down payment
-    tk.Label(root, text="Down Payment:").grid(row=2, column=0, padx=10, pady=5, sticky="e")
+    tk.Label(root, text="Down Payment($):").grid(row=2, column=0, padx=10, pady=5, sticky="e")
     down_payment_entry = tk.Entry(root)
     down_payment_entry.grid(row=2, column=1, padx=10, pady=5)
     down_payment_entry.insert(0, user_data.get("down_payment", ""))
@@ -126,6 +126,9 @@ def open_calculator(username):
     credit_score_entry.insert(0, user_data.get("credit_score", ""))
 
     result_label = tk.Label(root, text="User Data")
+    monthly_payment_label = tk.Label(root, text="Monthly Payment: $0.00")
+    monthly_payment_label.grid(row=7, column=0, columnspan=2)
+
     result_label.grid(row=8, column=0, columnspan=2)
 
 ######## Function to classify credit score #######
@@ -141,7 +144,26 @@ def open_calculator(username):
         except:
             return "Unknown"
         
-        
+    def calculate_payment():
+        try:
+            price = float(price_entry.get())
+            down_payment = float(down_payment_entry.get())
+            interest_rate = float(interest_entry.get())
+            term = int(term_entry.get())
+
+            loan_amount = price - down_payment
+            monthly_rate = interest_rate / 100 / 12
+            n = term
+
+            if monthly_rate == 0:
+                monthly_payment = loan_amount / n
+            else:
+                monthly_payment = loan_amount * (monthly_rate * (1 + monthly_rate) ** n) / ((1 + monthly_rate) ** n - 1)
+
+            monthly_payment_label.config(text=f"Monthly Payment: ${monthly_payment:,.2f}")
+        except ValueError:
+            messagebox.showerror("Error", "Please enter valid numeric inputs.")
+   
     # Function to save data
 
     def save_data():
@@ -179,6 +201,7 @@ def open_calculator(username):
 
     ####################### Navigation Buttons############
     tk.Button(root, text="Save Inputs", command=save_data).grid(row=6, column=0, columnspan=2, pady=10)
+    tk.Button(root, text="Calculate Payment", command=calculate_payment).grid(row=7, column=1, columnspan=2, pady=10)
     tk.Button(root, text="Sign Out", command=login_screen).grid(row=9, column=0, columnspan=2, pady=10)
     tk.Button(root, text="Exit App", command=root.quit).grid(row=10, column=0, columnspan=2, pady=10)
 

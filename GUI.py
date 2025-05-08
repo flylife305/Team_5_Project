@@ -65,9 +65,13 @@ def login_screen():
             save_users(users)
             messagebox.showinfo("Success", "Account created. You can now log in.")
 
+    def logout():
+        auth_win.destroy()
+
     tk.Button(auth_win, text="Login", command=login).grid(row=2, column=0, pady=10)
     tk.Button(auth_win, text="Sign Up", command=signup).grid(row=2, column=1)
-
+    tk.Button(auth_win, text="Logout", command=logout).grid(row=2, column=2)
+    
     auth_win.mainloop()
 
 def open_calculator(username):

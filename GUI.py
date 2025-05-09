@@ -32,11 +32,11 @@ def login_screen():
     auth_win = tk.Tk()
     auth_win.title("Login or Sign Up")
 
-    tk.Label(auth_win, text="Username:").grid(row=0, column=0, padx=10, pady=5)
+    tk.Label(auth_win, text="Username:", bg="lightblue").grid(row=0, column=0, padx=10, pady=5)
     username_entry = tk.Entry(auth_win)
     username_entry.grid(row=0, column=1, padx=10, pady=5)
 
-    tk.Label(auth_win, text="Password:").grid(row=1, column=0, padx=10, pady=5)
+    tk.Label(auth_win, text="Password:", bg="lightblue").grid(row=1, column=0, padx=10, pady=5)
     password_entry = tk.Entry(auth_win, show="*")
     password_entry.grid(row=1, column=1, padx=10, pady=5)
 
@@ -68,9 +68,11 @@ def login_screen():
     def logout():
         auth_win.destroy()
 
-    tk.Button(auth_win, text="Login", command=login).grid(row=2, column=0, pady=10)
-    tk.Button(auth_win, text="Sign Up", command=signup).grid(row=2, column=1)
-    tk.Button(auth_win, text="Logout", command=logout).grid(row=2, column=2)
+    tk.Button(auth_win, text="Login", command=login, bg="darkgreen").grid(row=2, column=0, pady=10)
+    tk.Button(auth_win, text="Sign Up", command=signup, bg="darkgreen").grid(row=2, column=1)
+    tk.Button(auth_win, text="Logout", command=logout, bg="darkgreen").grid(row=2, column=2)
+
+    auth_win.configure(bg="lightblue")
     
     auth_win.mainloop()
 
@@ -79,31 +81,46 @@ def open_calculator(username):
 
     root = tk.Tk()
     root.title("Mortgage Calculator")
+root.configure(bg="lightblue")
 
-    tk.Label(root, text="Price of Property($):").grid(row=0, column=0, padx=10, pady=5, sticky="e")
+    # Price input field
+    tk.Label(root, text="Price of Property($):", bg="lightblue").grid(row=0, column=0, padx=10, pady=5, sticky="e")
     price_entry = tk.Entry(root)
     price_entry.grid(row=0, column=1, padx=10, pady=5)
     price_entry.insert(0, user_data.get("price", ""))
 
-    tk.Label(root, text="Down Payment($):").grid(row=1, column=0, padx=10, pady=5, sticky="e")
+    # Interest rate
+    tk.Label(root, text="Interest Rate(%):", bg="lightblue").grid(row=1, column=0, padx=10, pady=5, sticky="e")
+    interest_entry = tk.Entry(root)
+    interest_entry.grid(row=1, column=1, padx=10, pady=5)
+    interest_entry.insert(0, user_data.get("interest_rate", ""))
+
+    # Down payment
+    tk.Label(root, text="Down Payment($):", bg="lightblue").grid(row=2, column=0, padx=10, pady=5, sticky="e")
     down_payment_entry = tk.Entry(root)
-    down_payment_entry.grid(row=1, column=1, padx=10, pady=5)
+    down_payment_entry.grid(row=2, column=1, padx=10, pady=5)
     down_payment_entry.insert(0, user_data.get("down_payment", ""))
 
-    tk.Label(root, text="Loan Term (months):").grid(row=2, column=0, padx=10, pady=5, sticky="e")
+    # Property tax
+    tk.Label(root, text="Property Tax:", bg="lightblue").grid(row=3, column=0, padx=10, pady=5, sticky="e")
+    tax_entry = tk.Entry(root)
+    tax_entry.grid(row=3, column=1, padx=10, pady=5)
+    tax_entry.insert(0, user_data.get("property_tax", ""))
+
+    # Loan term
+    tk.Label(root, text="Loan Term (months):", bg="lightblue").grid(row=4, column=0, padx=10, pady=5, sticky="e")
     term_entry = tk.Entry(root)
-    term_entry.grid(row=2, column=1, padx=10, pady=5)
+    term_entry.grid(row=4, column=1, padx=10, pady=5)
     term_entry.insert(0, user_data.get("loan_term", ""))
 
-    tk.Label(root, text="Credit Score").grid(row=3, column=0, padx=10, pady=5, sticky="e")
+    tk.Label(root, text="Credit Score", bg="lightblue").grid(row=5, column=0, padx=10, pady=5, sticky="e")
     credit_score_entry = tk.Entry(root)
-    credit_score_entry.grid(row=3, column=1, padx=10, pady=5)
+    credit_score_entry.grid(row=5, column=1, padx=10, pady=5)
     credit_score_entry.insert(0, user_data.get("credit_score", ""))
 
-    result_label = tk.Label(root, text="User Data")
-    monthly_payment_label = tk.Label(root, text="Monthly Payment: $0.00")
-    monthly_payment_label.grid(row=5, column=0, columnspan=2)
-    result_label.grid(row=6, column=0, columnspan=2)
+    result_label = tk.Label(root, text="User Data", bg="lightblue")
+    monthly_payment_label = tk.Label(root, text="Monthly Payment: $0.00", bg="lightblue")
+    monthly_payment_label.grid(row=7, column=0, columnspan=2)
 
     def classify_credit(credit_score):
         try:
@@ -180,10 +197,10 @@ def open_calculator(username):
 
     display_saved_data()
 
-    tk.Button(root, text="Save Inputs", command=save_data).grid(row=4, column=0, columnspan=2, pady=10)
-    tk.Button(root, text="Calculate Payment", command=calculate_payment).grid(row=5, column=1, columnspan=2, pady=10)
-    tk.Button(root, text="Sign Out", command=login_screen).grid(row=7, column=0, columnspan=2, pady=10)
-    tk.Button(root, text="Exit App", command=root.quit).grid(row=8, column=0, columnspan=2, pady=10)
+    tk.Button(root, text="Save Inputs", command=save_data, bg="darkgreen").grid(row=6, column=0, columnspan=2, pady=10)
+    tk.Button(root, text="Calculate Payment", command=calculate_payment, bg="darkgreen").grid(row=7, column=1, columnspan=2, pady=10)
+    tk.Button(root, text="Sign Out", command=login_screen, bg="darkgreen").grid(row=9, column=0, columnspan=2, pady=10)
+    tk.Button(root, text="Exit App", command=root.quit, bg="darkgreen").grid(row=10, column=0, columnspan=2, pady=10)
 
     columns = ("Username", "Price", "Interest Rate", "Down Payment", "Loan Term", "Credit Score", "Credit Class")
     tree = ttk.Treeview(root, columns=columns, show="headings")
@@ -247,7 +264,7 @@ def open_calculator(username):
         for row in rows:
             tree.insert("", "end", values=row)
 
-    tk.Button(root, text="Update Table", command=lambda: [load_json_to_db(), display_db_data()]).grid(row=9, column=0, columnspan=2, pady=5)
+    tk.Button(root, text="Update Table", command=lambda: [load_json_to_db(), display_db_data()], bg="darkgreen").grid(row=11, column=0, columnspan=2, pady=5)
 
     root.mainloop()
     conn.close()

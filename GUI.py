@@ -108,7 +108,7 @@ def open_calculator(username):
     result_label = tk.Label(root, text="User Data", bg="lightblue")
     monthly_payment_label = tk.Label(root, text="Monthly Payment: $0.00", bg="lightblue")
     monthly_payment_label.grid(row=5, column=0, columnspan=2)
-    
+
     result_label.grid(row=6, column=0, columnspan=2)
 
     def classify_credit(credit_score):
@@ -222,12 +222,16 @@ def open_calculator(username):
 
     display_saved_data()
 
+    def sign_out():
+        root.destroy()
+        login_screen()
+
     tk.Button(root, text="Save Inputs", command=save_data).grid(row=4, column=0, columnspan=2, pady=10)
     tk.Button(root, text="Calculate Payment", command=calculate_payment).grid(row=5, column=1, columnspan=2, pady=10)
-    tk.Button(root, text="Sign Out", command=login_screen).grid(row=7, column=0, columnspan=2, pady=10)
+    tk.Button(root, text="Sign Out", command=sign_out).grid(row=7, column=0, columnspan=2, pady=10)
     tk.Button(root, text="Exit App", command=root.quit).grid(row=8, column=0, columnspan=2, pady=10)
 
-    columns = ("Username", "Price", "Interest Rate", "Down Payment", "Loan Term", "Credit Score", "Credit Class")
+    columns = ("Username", "Price ($)", "Interest Rate(%)", "Down Payment($)", "Loan Term (Months)", "Credit Score", "Credit Class")
     tree = ttk.Treeview(root, columns=columns, show="headings")
     for col in columns:
         tree.heading(col, text=col)

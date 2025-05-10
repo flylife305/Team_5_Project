@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="JHmvA5rbK6UxYE7x2ljV">
+    <mxGraphModel dx="2501" dy="728" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Z2pf4CWNWnGb8TGrgGFY-37" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Minimally Qualified&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-59" y="289" width="210" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2pf4CWNWnGb8TGrgGFY-38" value="&amp;nbsp;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;&amp;lt; = 600 Credit score&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Z2pf4CWNWnGb8TGrgGFY-37">
+          <mxGeometry x="-30" y="40" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2pf4CWNWnGb8TGrgGFY-42" value="&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;6% Interest&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Z2pf4CWNWnGb8TGrgGFY-37">
+          <mxGeometry x="70" y="40" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2pf4CWNWnGb8TGrgGFY-43" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Moderately Qualified&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="251" y="289" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2pf4CWNWnGb8TGrgGFY-44" value="&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;600 - 700 Credit score&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Z2pf4CWNWnGb8TGrgGFY-43">
+          <mxGeometry y="40" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2pf4CWNWnGb8TGrgGFY-45" value="&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;4.5 Interest&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Z2pf4CWNWnGb8TGrgGFY-43">
+          <mxGeometry x="110" y="40" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2pf4CWNWnGb8TGrgGFY-50" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Well Qualified&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="551" y="289" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2pf4CWNWnGb8TGrgGFY-52" value="&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;700+ Credit Score&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Z2pf4CWNWnGb8TGrgGFY-50">
+          <mxGeometry x="-20" y="40" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2pf4CWNWnGb8TGrgGFY-51" value="&lt;br style=&quot;text-wrap-mode: wrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;3.5% interest&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Z2pf4CWNWnGb8TGrgGFY-50">
+          <mxGeometry x="80" y="35" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2pf4CWNWnGb8TGrgGFY-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Z2pf4CWNWnGb8TGrgGFY-53">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z2pf4CWNWnGb8TGrgGFY-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Z2pf4CWNWnGb8TGrgGFY-53" target="Z2pf4CWNWnGb8TGrgGFY-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2pf4CWNWnGb8TGrgGFY-53" value="Applicants" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2pf4CWNWnGb8TGrgGFY-54" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Username&lt;/div&gt;&lt;div&gt;Password&lt;/div&gt;Price of Property&lt;div&gt;Down Payment&lt;/div&gt;&lt;div&gt;Loan Team (months)&lt;/div&gt;&lt;div&gt;Credit Score&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Z2pf4CWNWnGb8TGrgGFY-53">
+          <mxGeometry x="34" y="50" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Z2pf4CWNWnGb8TGrgGFY-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.54;entryY=-0.005;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Z2pf4CWNWnGb8TGrgGFY-53" target="Z2pf4CWNWnGb8TGrgGFY-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
